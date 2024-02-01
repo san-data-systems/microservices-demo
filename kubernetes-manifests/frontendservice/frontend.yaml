@@ -104,10 +104,11 @@ kind: Service
 metadata:
   name: frontend
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: frontend
   ports:
   - name: http
+    nodePort: 31000
     port: 80
     targetPort: 8080
