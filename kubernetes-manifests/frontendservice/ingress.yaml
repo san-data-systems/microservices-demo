@@ -2,7 +2,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: frontend
-  namespace: nethopper
   annotations:
     nginx.ingress.kubernetes.io/backend-protocol: http
     cert-manager.io/cluster-issuer: letsencrypt-prod
