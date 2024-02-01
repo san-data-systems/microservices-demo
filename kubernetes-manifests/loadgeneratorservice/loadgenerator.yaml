@@ -15,8 +15,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: loadgenerator
-  labels:
-    app: loadgenerator
 spec:
   selector:
     matchLabels:
@@ -69,7 +67,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: loadgenerator
+        image: gcr.io/google-samples/microservices-demo/loadgenerator:v0.9.0
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"
