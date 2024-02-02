@@ -1,0 +1,22 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  annotations: &ref_0
+    sealedsecrets.bitnami.com/cluster-wide: 'true'
+    nethopper.io/controlled: 'true'
+    nethopper.io/controlled-type: iac
+    nethopper.io/iac-provider-key: aws
+    nethopper.io/iac-provider-name: AWS
+    nethopper.io/generated-at: '2024-02-02T18:04:26+05:30'
+    nethopper.io/generator-version: 5.1.0
+  name: aws-creds
+  namespace: default
+spec:
+  encryptedData:
+    creds: >-
+      AgCVEVDevquz7jS2Y8zlitHsW9ETRi5Icq3r1YTK2ZIMrdJsbTbQ8SUm1XYjRU0WW/sEoj39A0dDcC15YtNiHjSwB9xdnrLA9vSK7UBFsgtJQMeo/5e3D4yXzm0SBpOsWzBDnZElvxOTrZ8zt0Wy2XPgURW9qpgzszcyzS7Ny256M+Zh23dho2QlwFsck+UL842H7pG0AG+g9TRJDKZVCGMl5b9YUiiocgsimS5wHCsuvsof6aBZe0gYlBvPvvXMorGRqf50Vacu34d0VViJOJ1qkHydCbWWTzSN7I48NqHeVt7imvLbYXZiNRlyrjDit3b72pk84m1c11GORRWFhewSk4rXUYvSOATbSaoG4jQGsvaihlhVAysNyPTrwmxHQt91yIhQtLIC9YQ6Xg7qPHfLz4YkJrQunAkwwyVH+yzoC21ZobfzsPnuKymR9/jmgthitV3QmIGJ0K0JXoYZqJIh4h3bZWQW4v/Ndh1LLRDQ/S5NRHjo9ayNypwPz5mw77xbQjyXznem70oMCp5Sb2CrS1h5iaJ4Bl5XFJxVUil7mn+Pagi/YZz4DF3D29ATlq3KdlCcLr7gkX6mlR3XIKAkaLgSErkFRby8RQv3HskT2y5S1+JJf5KgeAxcPz2s8BjXEmK1Wv9y6KRuol7i26Tk/vm+PuFRcFVSZi370BDW3Z2FB9W78nUwR29JB/PCwcMaAwXCRrR15IAvQEBcBUzJEeQTmyr1pHu6RKQGe1tb/xdAe9u5jG4IaF1vyKhTZTy3LxfVGcMJZafXdhDfcT7PdI64cPyCPuC4WZvhyhv2Ha2aaSxR3H1VLWqOzyafN5aSErav0/oo1iliI9rENJ7pSEEV
+  template:
+    metadata:
+      annotations: *ref_0
+      name: aws-creds
+    type: Opaque
