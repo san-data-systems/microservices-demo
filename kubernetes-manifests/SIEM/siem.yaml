@@ -1,5 +1,3 @@
----
-# For more information https://www.elastic.co/guide/en/fleet/current/running-on-kubernetes-managed-by-fleet.html
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
@@ -42,13 +40,13 @@ spec:
             # Fleet Server URL to enroll the Elastic Agent into
             # FLEET_URL can be found in Kibana, go to Management > Fleet > Settings
             - name: FLEET_URL
-              value: "https://6018225c2d1f42148e4b88203b657ccf.fleet.us-east-2.aws.elastic-cloud.com:443"
+              value: https://6018225c2d1f42148e4b88203b657ccf.fleet.us-east-2.aws.elastic-cloud.com:443
             # Elasticsearch API key used to enroll Elastic Agents in Fleet (https://www.elastic.co/guide/en/fleet/current/fleet-enrollment-tokens.html#fleet-enrollment-tokens)
             # If FLEET_ENROLLMENT_TOKEN is empty then KIBANA_HOST, KIBANA_FLEET_USERNAME, KIBANA_FLEET_PASSWORD are needed
             - name: FLEET_ENROLLMENT_TOKEN
               value: "Z29icmc0MEJvZUhhNERuMWlSR1c6TTJpV1o0OWpTdWlId0RPbnRhVzV3dw=="
             - name: KIBANA_HOST
-              value: "http://kibana:5601"
+              value: http://kibana:5601
             # The basic authentication username used to connect to Kibana and retrieve a service_token to enable Fleet
             - name: KIBANA_FLEET_USERNAME
               value: "elastic"
